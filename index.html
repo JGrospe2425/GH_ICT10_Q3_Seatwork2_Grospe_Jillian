@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatwork#2</title>
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #fff5f8, #fde2ea);
+        font-family: "Poppins", Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        background-color: #fff0f6;
+        padding: 25px;
+        border-radius: 18px;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 8px 20px rgba(201, 79, 124, 0.15);
+    }
+
+    label {
+        color: #b84d73;
+        font-weight: 500;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input[type="radio"] {
+        margin: 0 6px 0 10px;
+        accent-color: #f2a1c7;
+    }
+
+    select {
+        width: 100%;
+        margin-top: 8px;
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid #f4b6cf;
+        background-color: #fff7fb;
+        color: #7a2f4a;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        margin-top: 18px;
+        padding: 10px;
+        border-radius: 14px;
+        border: none;
+        background-color: #f4a6c1;
+        color: white;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: 0.3s ease;
+    }
+
+    input[type="button"]:hover {
+        background-color: #e48aad;
+        transform: translateY(-1px);
+    }
+
+    #output {
+        margin-top: 15px;
+        text-align: center;
+        color: #8a2d4f;
+        font-weight: 600;
+        background-color: #ffe4ef;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    h1 {
+    text-align: center;
+    color: #c94f7c;
+    font-weight: 600;
+    margin-bottom: 15px;
+    }
+</style>
+<body>
+
+    <form>
+         <h1>Intrams Team Checker</h1>
+
+        <label>Are you done with the online registration?</label><br>
+        Yes<input type="radio" name="regis" id="regis" value="yes">
+        No<input type="radio" name="regis" id="regis" value="no"><br>
+        
+        <label>Do you have medical clearance from the clinic?</label><br>
+        Cleared<input type="radio" name="body" id="body" value="cleared">
+        Not Cleared<input type="radio" name="body" id="body" value="not"><br>
+
+         <label>What is your Grade & Section?</label><br>
+            7<input type="radio" name="grade" id="grade" value="7">
+            8<input type="radio" name="grade" id="grade" value="8">
+            9<input type="radio" name="grade" id="grade" value="9">
+            10<input type="radio" name="grade" id="grade" value="10">
+
+            <select id="section" name="section">
+            <option id="section" value="emerald">Emerald</option>
+            <option id="section" value="ruby">Ruby</option>
+            <option id="section" value="sapphire">Sapphire</option>
+            <option id="section" value="topaz">Topaz</option>
+            </select>
+
+        <input type="button" py-click="intrams" value="Check">
+
+        <div id="output"></div>
+    </form>
+    <py-script src="main.py"></py-script>
+</body>
+</html>
